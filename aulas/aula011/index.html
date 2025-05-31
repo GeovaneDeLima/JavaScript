@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu País</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            text-align: center;
+        }
+        h1{
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Sistema de País</h1>
+        <div>
+            <label for="pais">Qual o seu país? </label>
+            <input type="text" name="pais" id="pais">
+            <input type="button" value="verificar" id="but">
+        </div>
+        <div id="res"></div>
+    </main>
+</body>
+<script>
+    var pais = document.getElementById('pais')
+    var but = document.getElementById('but')
+    var res = document.getElementById('res')
+
+    but.addEventListener('click', verificar)
+
+    function verificar (){
+        if (pais == 'brasil'){
+            res.innerHTML = ' Você mora no Brasil'
+            res.innerHTML += 'Você é <strong>BRASILEIRO</strong>'
+        }else{
+            res.innerHTML = 'você mora fora do Brasil'
+            res.innerHTML += ' Você é <strong>ESTRANGEIRO</strong>'
+        }
+    }
+</script>
+</html>
