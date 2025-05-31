@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM</title>
+</head>
+<body>
+    <h1>Vamos conversar</h1> 
+
+    <div>
+        <input type="number" name="" id="num1">
+        <input type="number" name="" id="num2">
+        <input type="button"  value="somar" id="but1">
+    </div>
+    <p id="resul">resultado</p>
+</body>
+<script>
+     var but = document.getElementById('but1')
+
+
+    but.addEventListener('click', clicar)
+    // meio complicado pegar o jeito
+    function clicar (){
+        var num1 = document.getElementById('num1') 
+        var num2 = document.getElementById('num2')
+        var n1 = Number(num1.value)
+        var n2 = Number(num2.value)
+        var s = n1 + n2 
+        var resul = document.getElementById('resul')
+
+        resul.innerText = 'A soma entre ' + n1 + ' mais ' + n2 + ' é: ' + s
+    }
+</script>
+</html>

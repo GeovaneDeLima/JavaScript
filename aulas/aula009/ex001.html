@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: lightblue;
+        font-size: 1.5em;
+      }   
+    </style>
+</head>
+<body>
+    <h1 name="dom">Estudo em DOM</h1>
+    <p class="p1">aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <h1 id="criador">H1 de teste</h1>
+    <div class="botao">clique em mim</div>  
+</body>
+<script>
+      var ciador = document.getElementById ('criador')
+      var dom = document.getElementsByName ('dom') [0]
+      var a1 = document.getElementsByTagName('h1')[0]
+      var botao = document.getElementsByClassName('botao') [0]
+      var p1 = document.querySelector('p.p1')
+
+      document.write("estou usando o conteudo da teg <h1> " + a1.innerHTML)// por marca    
+      a1.style.background = 'blue'// por marca 
+      criador.style.background = 'grey'// por id
+      dom.style.background = 'blue'// por name
+      botao.style.textAlign = 'center'// por class
+      p1.innerHTML = 'olá mundo'// por seletor
+    </script> 
+</html>
