@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Preço </title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 4.5em;
+        }
+        div{
+            margin: auto;
+            width: 250px;
+            text-align: center;
+            background-color: lightgray;
+            padding: 20px;
+            font-size: 1.5em;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Cauculando preço</h1>
+        <div id="but">Comprar Produto</div>
+    </main>
+</body>
+<script>
+    var but = document.getElementById('but')
+
+    but.addEventListener('click', compra)
+
+    function compra (){
+        var pro = prompt('Qual produto você vai comprar? ')
+        var valor = prompt('Qual o valor do produto? ')
+        var valorn = Number.parseFloat(valor)
+        var pag = prompt('Quantos reais você vai entregar para pagar o poduto? ')
+        var pagn = Number.parseFloat(pag)
+        
+        var troco = pagn - valorn  
+        alert('Comprando o(a) ' + pro + ' por R$' + valor + ' e dando R$ '+ pagn + 'para pagar, você vai receber R$' + troco + ' de troco' ) 
+    }
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de boas vindas</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 4.5em;
+        }
+        div{
+            margin: auto;
+            width: 250px;
+            text-align: center;
+            background-color: lightgray;
+            padding: 20px;
+            font-size: 1.5em;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Boas-Vindas</h1>
+        <div id="bot">inicie o desafio</div>
+    </main>
+</body>
+<script>
+     
+    var bot = document.getElementById('bot')
+
+    bot.addEventListener('click', conhecer)
+
+    function conhecer (){
+        var  nome = prompt('qual o seu nome? ')
+        var idade = prompt('Quantos anos você tem?')
+        alert('Hoje eu conheci ' + nome + ' que tem ' + idade + ' anos de idade!')
+    }
+</script>
+</html>

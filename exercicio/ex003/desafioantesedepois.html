@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Antes e Depois</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 4.5em;
+        }
+        div{
+            margin: auto;
+            width: 250px;
+            text-align: center;
+            background-color: lightgray;
+            padding: 20px;
+            font-size: 1.5em;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Antes e Depois</h1>
+        <div id="bot">Antecessor e Sucessor</div>
+    </main>
+</body>
+<script>
+    var bot = document.getElementById('bot')
+    
+    bot.addEventListener('click', antesu)
+    //ainda teho dificuldade com esse negocio de mudar o tipo da variavel 
+    function antesu (){
+        var num = prompt('Digite um número inteiro qualquer')
+        var n = Number.parseInt(num)
+        var ant = n - 1
+        var su = n + 1  
+        alert('O antercessor de ' + n + ' é ' + ant + '  E o sucessor de ' + n + ' é ' + su)     
+    }
+</script>
+</html>
